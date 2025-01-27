@@ -1,0 +1,36 @@
+// Employee.java
+public class Employee {
+
+    // Instance variables
+    String name;
+    double salary;
+
+    // Default constructor
+    public Employee() {
+        name = "Unknown";
+        salary = 0;
+    }
+
+    // Overloaded constructor to initialize name with a default salary
+    public Employee(String name) {
+        this.name = name;
+        this.salary = 50000; // default salary if only name is given
+    }
+
+    // Method to display employee details
+    public void DisplayEmployeeDetails() {
+        System.out.println("Employee Name: " + name);
+        System.out.println("Employee Salary: " + salary);
+    }
+
+    // Main method to test the Employee class
+    public static void main(String[] args) {
+        // Creating an employee with the default constructor
+        Employee employee1 = new Employee();
+        employee1.DisplayEmployeeDetails();
+
+        // Creating an employee with a custom name and default salary
+        Employee employee2 = new Employee("John Doe");
+        employee2.DisplayEmployeeDetails();
+    }
+}
